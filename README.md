@@ -4,7 +4,7 @@
 
 ## Preview
 
-Você pode visualizar a página do projeto [aqui](https://anamanuellar.github.io/ODS13-project/)
+Você pode visualizar a página do projeto [aqui(https://anamanuellar.github.io/ODS13-project/)](https://anamanuellar.github.io/ODS13-project/)
 
 
 ## Introdução
