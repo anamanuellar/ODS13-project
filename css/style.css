@@ -4,53 +4,52 @@
 }
 
 body {
-    font-family: Open Sans;
-    font-size: 18px;
-    line-height: 28px;
-    background: url("../assets/img/seabottom.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: content-box;
-    background-color: #687273;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  
-  .navbar::active {
+  font-family: Open Sans;
+  font-size: 18px;
+  line-height: 28px;
+  background: url("../assets/img/seabottom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-color: #687273;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+  .navbar {
+    position: fixed;
     top: 0;
-    right: 20px;
-    background-color: transparent;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    padding: 5px 0;
   }
   
   .navbar-nav {
     list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: right;
     margin: 0;
     padding: 0;
-    display: flex;
-    transition: all 0.3s ease; 
-    transform: translateX(0); 
   }
   
   .nav-item {
-    margin-left: 20px;
+    margin: 0 10px;
   }
   
-  .nav-link, .nav-link:visited {
+  .nav-link,
+  .nav-link:visited {
     text-decoration: none;
-    color: #dfdfdf; 
+    color: #dfdfdf;
     font-size: 18px;
-    position: relative;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
   }
   
   .nav-link:hover {
-    background-color: #1e2a3a; 
-    color: #fff; 
+    background-color: #1e2a3a;
+    color: #fff;
     border-radius: 5px;
   }
 
@@ -154,9 +153,12 @@ body {
     max-width: 650px;
     margin: 0 0;
   }
-  p {
+  p, ol {
     margin: 30px 0;
     text-align: justify;
+  }
+  h4 {
+    padding-bottom: 10px;
   }
 
   .bg-1{
@@ -179,7 +181,6 @@ body {
     text-decoration-color: #008000;
     font-weight: bold;
   }
-
   .Container {
     display: flex;
     flex: 1 0 auto;
@@ -194,10 +195,6 @@ body {
     flex-direction: row;
     column-gap: 0.5em;
   }
-  
-  .column {
-   flex: 100%;
-  }
   .slide {
     max-width: 100%;
     display: block;
@@ -208,16 +205,6 @@ body {
     animation: moveToLeft 40s infinite linear;
     animation-delay: 1000ms;
   }
-  .illustration {
-    width: 30%;
-    margin-left: 1vw;
-  }
-  .illustration1 {
-    width: 25%;
-    margin: 25vw 75vw;
-    padding: 5vw;
-    position: absolute;
-  }
   @keyframes moveToLeft {
     0% {
       transform: translateX(0px);
@@ -226,14 +213,63 @@ body {
       transform: translateX(300px);
     }
   }
-
+  .illustration {
+    width: 30%;
+    margin-left: -16rem;
+  }
   iframe {
     width: 700px; 
     margin-left: 5vw;
     margin-right: auto; 
   }
+  #section6 {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 5px;
+  }
+  
+  .main-column {
+    width: 70%;
+  }
+  
+  .contact-column {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-icons li {
+    margin: 0 5px;
+  }
+  
+  .social-icons a {
+    color: #1e2a3a;
+    font-size: 20px;
+  }
+  
   footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -246,15 +282,11 @@ body {
 
 .footer-content {
     width: 100%;
-    max-width: 1200px; 
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     color: white;
     font-size: 14px;
 }
-
-
-
 
   @media only screen and (max-width: 768px) {
     main {
@@ -282,15 +314,37 @@ body {
       background-clip: text;
       color: transparent;
     }
+    .navbar-nav {
+      list-style: none;
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-item {
+      margin: 0 2px;
+    }
+    .nav-link,
+    .nav-link:visited {
+    text-decoration: none;
+    color: #dfdfdf;
+    font-size: 14px; 
+    transition: background-color 0.3s ease;
+  }
     .ContentContainer{
       position: relative;
       display: flex;
       border-radius: 5px;
-      margin-top: 25vh;
+      margin: 25vh 2vh;
     }
     .Content {
       margin: 0 auto;
       padding: 0.8em;
+    }
+    p, ol {
+      margin: 20px 10px;
+      text-align: justify;
     }
     iframe{    
       width: 80%;
